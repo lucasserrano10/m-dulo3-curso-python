@@ -1,0 +1,12 @@
+tabelaBrasileirao = ('palmeiras','gremio','átlético-mg','flamengo', 'botafogo', 'bragantino','fluminense', 'atlético-pr', 'internacional', 'fortaleza', 'são paulo', 'cuiába', 'corinthians', 'cruzeiro', 'vasco', 'bahia', 'santos', 'goias', 'curitiba', 'américa-mg')
+print(f'OS 5 PRIMEIROS COLOCADOS DO BRASILEIRO 2023 FORAM: {tabelaBrasileirao[0:6]}')
+print(f'-='*30)
+print(f'OS REBAIXADOS FORAM:{tabelaBrasileirao[-4]}')
+print(f'OS REBAIXADOS FORAM:{tabelaBrasileirao[-3]}')
+print(f'OS REBAIXADOS FORAM:{tabelaBrasileirao[-2]}')
+print(f'OS REBAIXADOS FORAM:{tabelaBrasileirao[-1]}')
+print(f'-='*30)
+print(f'OS TIMES EM ORDEM ALFABÉTICA : {sorted(tabelaBrasileirao)}')
+print(f'-='*30)
+print(f'POSIÇÃO DO CORINTHIANS: {(tabelaBrasileirao.index("corinthians"))+1}* posição')
+
