@@ -1,0 +1,11 @@
+num1 = int(input('digite um número: '))
+num2 = int(input('digite outro número: '))
+num3 = int(input('digite outro número: '))
+num4 = int(input('digite outro número: '))
+
+print(f'=*'*30)
+numerosUsuarios = (num1, num2, num3, num4)
+print(f'VOCÊ DIGITOU OS VALORES {numerosUsuarios}')
+print(f'O VALOR 9 APARECEU {numerosUsuarios.count(9)} VEZ')
+print(f'O PRIMEIRO VALOR 3 ESTÁ NA POSIÇÃO {numerosUsuarios.index(3)}')
+print(f'OS NÚMEROS PARES FORAM:')
