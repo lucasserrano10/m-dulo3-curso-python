@@ -1,7 +1,6 @@
 palavras = ('pizza', 'python','jogo','apple','iphone')
-vogais = ('a', 'e', 'i', 'o', 'u')
-print(f'NA PALAVRA {palavras[0]} temos {palavras.count()}')
-print(f'NA PALAVRA {palavras[1]} temos')
-print(f'NA PALAVRA {palavras[2]} temos')
-print(f'NA PALAVRA {palavras[3]} temos')
-print(f'NA PALAVRA {palavras[4]} temos')
+for p in palavras:
+    print(f'NA PALAVRA {p} temos')
+    for letra in p:
+        if letra.lower() in 'aeiou':
+            print(letra)
