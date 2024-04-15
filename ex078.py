@@ -1,6 +1,8 @@
 valores = []
-valores.append(4)
-valores.append(3)
-valores.append(2)
-for c in valores:
-    print(c)
+for v in range(0,5):
+    num = int(input('DIGITE UM VALOR: '))
+    valores.append(num)
+valores.sort()
+print(f'VALORES DIGITADOS {valores}')
+print(f'MAIOR VALOR DIGITADO {valores[4]}')
+print(f'MENOR VALOR DIGITADO {valores[0]}')
