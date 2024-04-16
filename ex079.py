@@ -1,5 +1,5 @@
 valores = []
-for c in range(1000):
+while True:
     num = int(input('DIGITE UM NÚMERO: '))
     if valores.count(num):
         print('VALOR JÁ TINHA SIDO CADASTRADO !')
