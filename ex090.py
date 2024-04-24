@@ -1,16 +1,26 @@
-boletim = [[],[],[]]
-cont = 0
+from time import sleep
+ficha = []
 while True:
     nome = str(input('NOME :'))
-    boletim[0].append(nome)
-    n1 = int(input('NOTA 1 :'))
-    boletim[1].append(n1)
-    n2 = int(input('NOTA 2 :'))
-    boletim[2].append(n2)
-    cont += 1
+    n1 = float(input('NOTA 1 :'))
+    n2 = float(input('NOTA 2 :'))
+    media = ((n1+n2)/2)
+    ficha.append([nome,[n1,n2],media])
     continuar = str(input('DESEJA CONTINUAR [S/N]: ')).strip().upper()
     if continuar == 'N':
         break
-print(f'No|||Nome|||Nota1||||Nota2')
-print(f'======================')
-print(f'{boletim[0][0]}\n {boletim[0][1]}')
+print(f'-=-'*25)
+print(f'{"No":<4}{"NOME":<10}{"MÉDIA":>8}')
+print(f'-'*25)
+for i, a in enumerate(ficha):
+    print(f'{i:<4}{a[0]:<10}{a[2]:>8.1f}')
+while True:
+    print(f'-'*25)
+    opc = int(input('MOSTRAR NOTAS DE QUAL ALUNO [999-INTERROMPE]: '))
+    if opc == 999:
+        print('FINALIZANDO...')
+        break
+    if opc <= len(ficha) - 1:
+        print(f'NOTAS DE {ficha[opc][0]} SÃO {ficha[opc][1]}')
+sleep(2)
+print('<<<VOLTE SEMPRE>>>')

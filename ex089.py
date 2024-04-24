@@ -1,17 +1,24 @@
-import random
-print(f'-=-'*30)
-print('MEGA SENA')
-print(f'-=-'*30)
-numerosPossiveis = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30]
-qtdade = int(input('QUANTOS JOGOS VOCÊ QUER QUE EU SORTEIE: '))
-aux = 0
-jogo = []
-print('=-=SORTEANDO JOGOS=-=')
-for c in range(0,qtdade):
-    while aux <= 9:
-        escolha = random.choice(numerosPossiveis)
-        jogo.append(escolha)
-        aux += 1
-    print(f'JOGO {c + 1}:{jogo}')
-    jogo.clear()
-print('=-=-=-=-=-BOA SORTE=-==-=-=-=-')
+from random import randint
+print(f'-=-'*10)
+print('     MEGA SENA     ')
+print(f'-=-'*10)
+lista = []
+jogos = []
+quant = int(input('QUANTOS JOGOS VOCÊ QUER QUE EU SORTEIE: '))
+total = 1
+while total <= quant:
+    cont = 0
+    while True:
+        num = randint(1,60)
+        if num not in lista:
+            lista.append(num)
+            cont += 1
+        if cont >=6:
+            break
+    lista.sort()
+    jogos.append(lista[:])
+    lista.clear()
+    total += 1
+print(f'-=-'*3,f'SORTEANDO {quant} JOGOS',f'-=-'*3)
+for i, l in enumerate(jogos):
+    print(f'jogo {i+1}: {l}')
