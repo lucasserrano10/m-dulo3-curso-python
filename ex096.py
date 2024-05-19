@@ -14,5 +14,3 @@ while True:
         break
 print('-'*35)
 print(f'A) Ao todo temos {len(cadastradas)} pessoas cadastradas !')
-media = soma / len(cadastradas)
-print(f'B) A Média de idade é de {media}')
