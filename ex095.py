@@ -9,3 +9,8 @@ jogador['total'] = sum(partidas)
 print(jogador)
 for k, v in jogador.items():
     print(f'O campo {k} tem o valor {v}')
+print()
+print(f'o jogador {jogador['Nome']} jogou {len(partidas)} partidas')
+print(f'-=-')
+for i, v in enumerate(jogador['gols']):
+    print(f'Na partida -> {i}, o {jogador['Nome']} fez {v}')
